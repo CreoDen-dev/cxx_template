@@ -23,7 +23,7 @@ foreach(TEST_FILE ${TEST_SRC_FILES})
     
     target_include_directories(${TEST_TARGET} PUBLIC ${CMAKE_CURRENT_LIST_DIR})
     
-    target_link_libraries(${TEST_TARGET} PUBLIC piped GTest::gtest_main)
+    target_link_libraries(${TEST_TARGET} PUBLIC ${PROJECT_NAME} GTest::gtest_main)
     
     gtest_discover_tests(${TEST_TARGET})
 
